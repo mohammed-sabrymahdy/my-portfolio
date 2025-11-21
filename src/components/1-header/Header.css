@@ -1,0 +1,185 @@
+/* ========== Header Styles ========== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+header ul {
+  gap: 1rem;
+}
+
+header .flex {
+  background-color: var(--bgHeader);
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 55px;
+  box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+header ul li a {
+  color: var(--title);
+  opacity: 0.8;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+header ul li a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ========== Menu Button (Mobile) ========== */
+header .menu {
+  display: none;
+  color: var(--title);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+header .menu:hover {
+  color: var(--blue);
+  scale: 1.1;
+}
+
+/* ========== Theme Toggle Button ========== */
+header .mode {
+  color: var(--title);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+header .mode:hover {
+  color: var(--blue);
+  scale: 1.1;
+}
+
+header .mode span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== Modal Overlay ========== */
+header .fixed {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+/* Light Theme Modal Overlay */
+.light header .fixed {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+/* ========== Modal Animation ========== */
+@keyframes move {
+  0% {
+    scale: 0;
+  }
+  70% {
+    scale: 1.05;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/* ========== Modal Styles ========== */
+header .fixed ul.modal {
+  animation: move 0.4s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  width: 60%;
+  background-color: var(--secondary);
+  color: var(--title);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 2px solid var(--border);
+}
+
+header .fixed ul.modal li {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem;
+}
+
+header .fixed ul.modal li a {
+  color: var(--title);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+header .fixed ul.modal li a:hover {
+  color: var(--blue);
+}
+
+header .fixed ul.modal li:last-child {
+  border-bottom: none;
+}
+
+header .fixed ul.modal li:first-child {
+  text-align: end;
+  border-bottom: none;
+}
+
+/* ========== Close Button (X) ========== */
+header .icon-cross {
+  font-size: 1.5rem;
+  color: var(--subtitle);
+  transition: all 0.3s ease;
+}
+
+header .icon-cross:hover {
+  color: var(--blue);
+  rotate: 90deg;
+  scale: 1.2;
+}
+
+/* ========== Icons Styling ========== */
+header .icon-sun,
+header .icon-moon-o {
+  color: var(--title);
+  transition: color 0.3s ease;
+}
+
+header .icon-sun:hover,
+header .icon-moon-o:hover {
+  color: var(--blue);
+}
+
+header .icon-verified {
+  color: var(--blue);
+}
+
+/* ========== Responsive Styles ========== */
+@media (max-width: 600px) {
+  header nav .flex {
+    display: none;
+  }
+
+  header .menu {
+    display: block;
+  }
+
+  header .fixed {
+    display: block;
+  }
+
+  header .fixed ul.modal {
+    width: 85%;
+    margin-top: 3rem;
+  }
+}
