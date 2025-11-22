@@ -92,7 +92,7 @@ const Main = () => {
                 <img width={266} src={item.imgPath} alt="" />
 
                 <div className="box" style={{ width: "266px" }}>
-                  <h1 className="title">{item.projectTitle}</h1>
+                  <h3 className="title">{item.projectTitle}</h3>
 
                   <p className="sub-title">
                     {isExpanded ? item.description : `${shortText}...`}
