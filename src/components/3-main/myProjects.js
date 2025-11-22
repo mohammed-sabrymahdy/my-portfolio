@@ -106,6 +106,13 @@ export const myProjects = [
       "bento-grid component HTML and CSS only.. frontend mentors project challenge",
   },
   {
+    projectTitle: "browser_extension_manager",
+    category: ["js"],
+    imgPath: "./images/browser.png",
+    link: "https://github.com/mohammed-sabrymahdy/browser-extensions-manager-ui-main.git",
+    description: "browser_extension_manager",
+  },
+  {
     projectTitle: "mortgage App",
     category: ["js"],
     imgPath: "./images/7.png",
